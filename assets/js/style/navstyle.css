@@ -1,0 +1,129 @@
+header.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+header .logo img{
+    width: 200px;
+    transition: width 0.6s ease-in-out;
+}
+
+header.sticky {
+    padding: 10px 80px;
+    background: #d7d7d7;
+}
+
+header.sticky .nav-link{
+    color: #272525;
+}
+
+header.sticky .logo img{
+    width: 120px;
+}
+
+.navbar-toggler{
+    display: none;
+}
+
+header.header-expanded{
+    background: #d7d7d7;
+}
+
+header.header-expanded .bar1, 
+header.header-expanded .bar2, 
+header.header-expanded .bar3 {
+    background: #545454;
+}
+header.header-expanded .nav-link{
+    color: #545454;
+}
+
+header ul.show {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+header.sticky ul.show {
+    background: transparent;
+}
+
+header .navbar-toggler,
+header #navicon {
+    border: none;
+    background: none;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 34px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-7px, -8px);
+    transform: rotate(45deg) translate(-7px, -8px);
+}
+
+@media screen and (max-width:  796px) {
+    header.navbar{
+        width: 100vw;
+        padding: 30px 80px;
+    }
+
+    header.sticky {
+        padding: 20px 60px;
+    }
+
+    .navbar-toggler{
+        display: block;
+    }
+    header .logo img{
+        width: 170px;
+        transition: width 0.6s ease-in-out;
+    }
+
+    header.sticky .navbar-toggler .bar1, 
+    header.sticky .navbar-toggler .bar2, 
+    header.sticky .navbar-toggler .bar3{
+        background: #545454;
+    }
+    
+}
+
+@media(max-width: 430px) {
+    header.navbar {
+        padding: 5px 10px;
+    }
+    
+    header .logo img{
+        width: 130px;
+        transition: width 0.6s ease-in-out;
+    }
+
+    header.sticky {
+        padding: 5px 20px;
+    }
+
+    header.sticky .logo img{
+        width: 100px;
+    }
+}
